@@ -9,6 +9,24 @@ import {
   Pressable,
 } from 'react-native';
 
+export const Button = ({ title }) => {
+  return (
+    <Pressable
+      style={{
+        backgroundColor: 'blue',
+        padding: 10,
+        alignItems: 'center',
+        marginTop: 20,
+      }}
+      onPress={() => {
+        alert('Pressed');
+      }}
+    >
+      <Text>{title}</Text>
+    </Pressable>
+  );
+};
+
 export default function App() {
   return (
     <SafeAreaView>
@@ -54,6 +72,10 @@ export default function App() {
             resizeMode="cover"
           />
         </View>
+
+        <Button title="press"></Button>
+        <Button title="2nd-button"></Button>
+
         <Pressable
           onPress={() => {
             alert('Pressed');
@@ -63,6 +85,7 @@ export default function App() {
             style={{ height: 60, width: 60, backgroundColor: 'red' }}
           ></View>
         </Pressable>
+
         <View>
           <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
