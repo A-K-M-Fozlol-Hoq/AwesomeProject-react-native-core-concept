@@ -9,23 +9,60 @@ import {
   Pressable,
 } from 'react-native';
 
-export const Button = ({ title }) => {
+export default function App() {
   return (
-    <Pressable
-      style={{
-        backgroundColor: 'blue',
-        padding: 10,
-        alignItems: 'center',
-        marginTop: 20,
-      }}
-      onPress={() => {
-        alert('Pressed');
-      }}
-    >
-      <Text>{title}</Text>
-    </Pressable>
+    <SafeAreaView style={{ flex: 1 }}>
+      <View
+        style={{
+          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'space-around',
+        }}
+      >
+        <View style={styles.view1} />
+        <View style={styles.view2} />
+        <View style={styles.view3} />
+      </View>
+    </SafeAreaView>
   );
-};
+}
+
+const styles = StyleSheet.create({
+  container: {},
+  view1: {
+    backgroundColor: 'red',
+    height: 100,
+    width: 100,
+  },
+  view2: {
+    backgroundColor: 'blue',
+    height: 100,
+    width: 100,
+  },
+  view3: {
+    backgroundColor: 'green',
+    height: 100,
+    width: 100,
+  },
+});
+
+// export const Button = ({ title }) => {
+//   return (
+//     <Pressable
+//       style={{
+//         backgroundColor: 'blue',
+//         padding: 10,
+//         alignItems: 'center',
+//         marginTop: 20,
+//       }}
+//       onPress={() => {
+//         alert('Pressed');
+//       }}
+//     >
+//       <Text>{title}</Text>
+//     </Pressable>
+//   );
+// };
 
 // export default function App() {
 //   return (
@@ -99,32 +136,6 @@ export const Button = ({ title }) => {
 //     </SafeAreaView>
 //   );
 // }
-
-export default function App() {
-  return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.view1} />
-      <View style={styles.view2} />
-      <View style={styles.view3} />
-    </SafeAreaView>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {},
-  view1: {
-    backgroundColor: 'red',
-    flex: 1,
-  },
-  view2: {
-    backgroundColor: 'blue',
-    flex: 1,
-  },
-  view3: {
-    backgroundColor: 'green',
-    flex: 1,
-  },
-});
 
 // const styles = StyleSheet.create({
 //   container: {
