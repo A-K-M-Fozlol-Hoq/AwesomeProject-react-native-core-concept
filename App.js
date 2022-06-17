@@ -25,6 +25,8 @@ export default function App() {
         <View style={styles.view4} />
         <View style={styles.view5} />
       </View>
+      <StatusBar style="light"></StatusBar>
+      {/* <StatusBar style="dark"></StatusBar> */}
     </SafeAreaView>
   );
 }
