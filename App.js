@@ -15,13 +15,15 @@ export default function App() {
       <View
         style={{
           flex: 1,
-          flexDirection: 'column',
-          justifyContent: 'space-around',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
         }}
       >
         <View style={styles.view1} />
         <View style={styles.view2} />
         <View style={styles.view3} />
+        <View style={styles.view4} />
+        <View style={styles.view5} />
       </View>
     </SafeAreaView>
   );
@@ -38,9 +40,21 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     height: 100,
     width: 100,
+    alignSelf: 'flex-start',
+    marginHorizontal: 20,
   },
   view3: {
     backgroundColor: 'green',
+    height: 100,
+    width: 100,
+  },
+  view4: {
+    backgroundColor: 'orange',
+    height: 100,
+    width: 100,
+  },
+  view5: {
+    backgroundColor: 'black',
     height: 100,
     width: 100,
   },
